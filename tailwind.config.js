@@ -7,8 +7,14 @@ module.exports = {
     extend: {
       colors: {
         'linen': '#ece7e2',
-      }
-    },
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'] 
+      },
+      backgroundImage: {
+        "blog-image": "url('/blog_bg.jpeg')",
+      },
   },
   plugins: [],
+}
 }

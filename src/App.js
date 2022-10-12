@@ -3,6 +3,8 @@ import {Routes, Route} from 'react-router-dom';
 import Dashboard from './Components/Dashboard';
 import Login from './Components/Login';
 import AppContext from './context/AppContext';
+import Blogs from './Components/Blogs';
+import BlogView from './Components/BlogView';
 
 export default function App() {
   let cont = useContext(AppContext)
@@ -11,9 +13,11 @@ export default function App() {
   return (
     <div>
       <Routes>
-        { isLogin? <Route index element={<Dashboard/>}></Route> : <Route index element={<Login/>}></Route> }
+        { isLogin? <Route path='/' element={<Dashboard/>}> <Route path='blog' element={<Blogs/>}></Route>
+        <Route path='/blog/blogview' element={<BlogView/>}></Route></Route> : <Route path='/' element={<Login/>}>
+        </Route> }
         
-        
+       
      
       </Routes>
     </div>
