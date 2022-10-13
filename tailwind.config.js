@@ -9,7 +9,9 @@ module.exports = {
         'linen': '#ece7e2',
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'] 
+        'poppins': ['Poppins', 'sans-serif'] ,
+        'overlock': ['Overlock', 'cursive'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       backgroundImage: {
         "blog-image": "url('/blog_bg.jpeg')",

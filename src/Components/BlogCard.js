@@ -5,7 +5,7 @@ export default function BlogCard(props) {
     console.log(props.data)
     let schema = props.data;
     return (
-        <div className='w-1/4 '>
+        <div className='w-1/2 lg:w-1/4'>
             <div className='px-5 py-5'>
 
                 <div className='bg-linen shadow-2xl p-4 space-y-5'>
@@ -22,7 +22,7 @@ export default function BlogCard(props) {
                             <span><h3 className='text-xs pl-1 pt-0.5'>{schema.Author}</h3></span>
                         </div>
                     </div>
-                   <Link to='blogview'> <p className='font-serif text-justify text-[15px]'>{schema.summary}</p></Link>
+                   <Link to='blogview'> <p className='font-serif text-justify text-[13px] pt-2'>{schema.summary}</p></Link>
 
 
                 </div>

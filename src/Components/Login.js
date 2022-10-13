@@ -25,10 +25,10 @@ let[login,setLogin] = useState(apper.stater)
   return (
 
     <div>
-      <form onSubmit={isLoggedIn}>
+      <form>
   <input type="email" autoComplete="on" onChange={(event)=>{setEmail(event.target.value)}}/>
   <input type="password" autoComplete="on" onChange={(event)=>{setPassword(event.target.value)}}/>
-  <button type="submit">Log In</button>
+ <Link to="/"> <button onClick={() => {isLoggedIn()}} type="submit">Log In</button> </Link>
   </form>
     </div>
   )

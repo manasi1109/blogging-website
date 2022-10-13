@@ -14,10 +14,14 @@ export default function App() {
     <div>
       <Routes>
         { isLogin? <Route path='/' element={<Dashboard/>}> <Route path='blog' element={<Blogs/>}></Route>
-        <Route path='/blog/blogview' element={<BlogView/>}></Route></Route> : <Route path='/' element={<Login/>}>
+        <Route path='/blog/blogview' element={<BlogView/>}></Route></Route> : <Route path='/' element={<Dashboard/>}>
+        <Route path='blog' element={<Blogs/>}></Route>
+        <Route path='/blog/blogview' element={<BlogView/>}></Route>
+          
         </Route> }
         
-       
+        <Route path='/login' element={<Login/>}>
+        </Route>
      
       </Routes>
     </div>

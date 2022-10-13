@@ -8,7 +8,29 @@
     justify-content: space-between;
     padding: 20px;
     position: fixed;
+   
+ 
 }
+.mobile_logo{
+    display: none;
+}
+
+@media screen and (max-width: 925px){
+    .sidebar {
+   transition: all 0.3s linear;
+     /* transform: scaleX(0.5); */
+    }
+    span {
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .mobile_logo{
+        display: block;
+    }
+}
+
 
 .top-nav li {
     display:flex;
