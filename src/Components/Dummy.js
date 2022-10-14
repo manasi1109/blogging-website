@@ -2,7 +2,7 @@ let Bloge = {
     title : "Testing Area",
      summary : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
      image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyZ9shQrndBtfbMOUXJi6w-uK3vT4-CLZqzA&usqp=CAU",
-     CreatedAt : "21- JAN",
+     CreatedAt : "21 JAN",
      Author : "MRK",
      Category : "Cat Facts",
      Likes : 20,

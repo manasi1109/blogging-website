@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import AppContext from "./AppContext";
 
 export default function AppState(props) {
-    let [stater , setStater] = useState(false);
+  let [stater , setStater] = useState(localStorage.getItem('state'));
+  
+   
 
 
  

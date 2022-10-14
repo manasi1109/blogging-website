@@ -12,9 +12,11 @@ export default function Dashboard() {
     let [logState , uselogState] = useState(context.stater);
     function logOut() {
         context.setStater(false);
+        localStorage.setItem('state',false);
     }
     function logIn() {
         context.setStater(true);
+        localStorage.setItem('state',true);
     }
     return (
         <div>
@@ -46,13 +48,13 @@ export default function Dashboard() {
                     </svg>
                     <Link to="/">  <span className='san font-semibold text-sm'>Authors</span></Link>
                     </li>
-                    { context.stater ?   <li className='h-12 bg-gradient-to-r from-teal-500 to-midnightblue-500 rounded text-white my-1 px-3 hover:bg-white hover:text-black'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 shrink-0">
+                    { context.stater ?  <Link to="/create"> <li className='h-12 bg-gradient-to-r from-teal-500 to-midnightblue-500 rounded text-white my-1 px-3 hover:bg-white hover:text-black'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 shrink-0">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                     </svg>
                         <span className='san font-semibold text-sm'>Create</span>
-                    </li> : (<div></div>)}
+                    </li></Link> : (<div></div>)}
                 </ul>
-              { context.stater? <Link to=""> <p onClick={() => {logOut()}} className='text-linen hover:text-teal-500 flex'>Logout&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              { context.stater? <Link to="/login"> <p onClick={() => {logOut()}} className='text-linen hover:text-teal-500 flex'>Logout&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
 </svg>
 </p></Link> :  <Link to="/login"> <p className='text-linen hover:text-teal-500 flex'>Login&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -63,14 +65,13 @@ export default function Dashboard() {
             <main>
                 <header>
 
-                    {/* <!-- Header Buttons --> */}
                     <div className="buttons-header">
-
+                    
                     </div>
                 </header>
                 <Outlet/>
             </main>
-            
+           
         </div>
     )
 }

@@ -22,7 +22,7 @@ export default function BlogCard(props) {
                             <span><h3 className='text-xs pl-1 pt-0.5'>{schema.Author}</h3></span>
                         </div>
                     </div>
-                   <Link to='blogview'> <p className='font-serif text-justify text-[13px] pt-2'>{schema.summary}</p></Link>
+                   <Link to='blogview'> <p className='font-serif text-justify text-[13px] pt-2 truncate'>{schema.summary}</p></Link>
 
 
                 </div>
