@@ -1,0 +1,18 @@
+  .child {
+    overflow-y: scroll; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }  
+
+::-webkit-scrollbar {
+    background-color: rgb(176, 176, 255);
+    border-radius: 20px;
+    width: 8px;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(249, 147, 147); 
+    border-radius: 20px;
+  }
+  
+  

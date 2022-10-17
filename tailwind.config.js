@@ -17,6 +17,8 @@ module.exports = {
         "blog-image": "url('/blog_bg.jpeg')",
       },
   },
-  plugins: [],
+  plugins: [
+    require('./node_modules/tailwind-scrollbar-hide/src/index.js'),
+  ],
 }
 }

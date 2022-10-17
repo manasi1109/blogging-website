@@ -8,6 +8,7 @@ import BlogView from './Components/BlogView';
 import Create from './Components/Create';
 import Categories from './Components/Categories';
 import Authors from './Components/Authors';
+import Home from './Components/Home';
 
 export default function App() {
   let cont = useContext(AppContext)
@@ -18,7 +19,7 @@ export default function App() {
       <Routes>
       
 
-        { isLogin? <Route path='/' element={<Dashboard/>}> <Route path="create" element={<Create/>}></Route> <Route path='blog' element={<Blogs/>}> </Route> <Route path='categories' element={<Categories/>}></Route> <Route path='authors' element={<Authors/>}></Route>
+        { isLogin? <Route path='/' element={<Dashboard/>}> <Route index element={<Home/>}></Route> <Route path="create" element={<Create/>}></Route> <Route path='blog' element={<Blogs/>}> </Route> <Route path='categories' element={<Categories/>}></Route> <Route path='authors' element={<Authors/>}></Route>
         <Route path='/blog/blogview' element={<BlogView/>}></Route></Route> : <Route path='/' element={<Dashboard/>}> <Route path='/login' element={<Login/>}></Route>
         <Route path='blog' element={<Blogs/>}></Route>
         <Route path='/blog/blogview' element={<BlogView/>}></Route>
