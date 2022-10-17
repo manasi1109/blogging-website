@@ -10,9 +10,9 @@ export default function BlogCard(props) {
 
                 <div className='bg-linen shadow-2xl p-4 space-y-5'>
                     <p className='inline-block w-8 text-center bg-white opacity-70 text-xs py-1 font-semibold absolute mx-2 my-7 font-poppins'>{schema.CreatedAt}</p>
-                    <img src={schema.image} alt="" className='w-full rounded-md' />
+                    <img src={schema.Image} alt="" className=' w-full rounded-md' />
                     <div className='mt-10'> <h3 className='bg-[#08bd80] relative -mt-9 text-white font-medium font-poppins w-1/3 py-1 text-xs text-center border-white border-solid border-2 rounded block m-auto'>{schema.Category}</h3></div>
-                    <h1 className='text-center font-serif font-extrabold'>{schema.title}</h1>
+                   <div className='h-20'> <h1 className='text-center font-serif font-extrabold'>{schema.title}</h1> </div>
                     <div className='flex justify-between'>
                         <div className='flex flex-wrap m-auto justify-end align-middle'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-black-500 font-extrabold py-1 rounded-2xl bg-slate-300">
@@ -23,7 +23,7 @@ export default function BlogCard(props) {
                         </div>
                     </div>
                    <Link to='blogview'> <p className='font-serif text-justify text-[13px] pt-2 truncate'>{schema.summary}</p></Link>
-
+                  
 
                 </div>
                 <div className='flex flex-wrap justify-end bg-white align-middle'>

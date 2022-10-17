@@ -4,7 +4,7 @@ let Bloge = {
         email : "admin@gmail.com",
         password : "Abc@123"
     }] ,
-    "BLOG" : [{
+    BLOG : [{
         id : 1 ,
         title : "Hello World",
         summary : "An analysis of radioactive chemicals in ice cores indicates one of the most powerful solar storms ever hit Earth around 7176 B.C.",
@@ -156,3 +156,5 @@ let Bloge = {
     }]
     
 }
+
+export default Bloge

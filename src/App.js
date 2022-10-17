@@ -6,6 +6,7 @@ import AppContext from './context/AppContext';
 import Blogs from './Components/Blogs';
 import BlogView from './Components/BlogView';
 import Create from './Components/Create';
+import Categories from './Components/Categories';
 
 export default function App() {
   let cont = useContext(AppContext)
@@ -16,10 +17,9 @@ export default function App() {
       <Routes>
       
 
-        { isLogin? <Route path='/' element={<Dashboard/>}> <Route path="create" element={<Create/>}></Route> <Route path='blog' element={<Blogs/>}></Route>
+        { isLogin? <Route path='/' element={<Dashboard/>}> <Route path="create" element={<Create/>}></Route> <Route path='blog' element={<Blogs/>}> </Route> <Route path='categories' element={<Categories/>}></Route>
         <Route path='/blog/blogview' element={<BlogView/>}></Route></Route> : <Route path='/' element={<Dashboard/>}> <Route path='/login' element={<Login/>}></Route>
         <Route path='blog' element={<Blogs/>}></Route>
-
         <Route path='/blog/blogview' element={<BlogView/>}></Route>
           
         </Route> }
